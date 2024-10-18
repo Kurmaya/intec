@@ -67,6 +67,7 @@
                     <p>Lorem ipsum dolor sit amet.</p>
                     <a href=""><button>View More</button></a>
                 </div>
+                </div>
                 
         </div>
         
@@ -77,6 +78,7 @@
        <div class="img-holder">
         <img src="./assets/all-in-one/A523-N50952_new.jpg" alt="">
        </div>
+       
        <div class="content">
         <h2>Lorem, ipsum dolor.</h2>
         <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, nemo?</h3>
@@ -86,13 +88,14 @@
             </div>
             
             <div class="desc-item">
-                <h4>Lorem ipsum dolor sit amet.</h4>
+                <img src="./assets/other images/ryzen.webp" alt="">
+                <!-- <h4>Lorem ipsum dolor sit amet.</h4> -->
             </div>
             <div class="desc-item">
-                <h4>Lorem ipsum dolor sit amet.</h4>
+                <h4>Upto <span class="big">3X</span> Faster<sup>*</sup>.</h4>
             </div>
             <div class="desc-item">
-                <h4>Lorem ipsum dolor sit amet.</h4>
+                <h4> <span class="big"> 22</span>" Screen Size.</h4>
             </div>
         </div>
         <a href=""><button>View All</button></a>
@@ -100,12 +103,45 @@
        
     </section>
     <section id="fourth">
-        <h1>Printers</h1>
+        
+        <div class="holder">
+            <canvas id="video2">
+
+            </canvas>
+            <h1>Laptops</h1>
+            <div class="content">
+                <h2>Lorem, ipsum dolor.</h2>
+                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, nemo?</h3>
+                <div class="desc">
+                    <div class="desc-item">
+                        <img src="./assets/other images/intel-logo.jpg" alt="">
+                    </div>
+                    
+                    <div class="desc-item">
+                        <img src="./assets/other images/ryzen.webp" alt="">
+                        <!-- <h4>Lorem ipsum dolor sit amet.</h4> -->
+                    </div>
+                    <div class="desc-item">
+                        <h4>Upto <span class="big">3X</span> Faster<sup>*</sup>.</h4>
+                    </div>
+                    <div class="desc-item">
+                        <h4> <span class="big"> 20</span> Hours Battery Life.<sup>*</sup></h4>
+                    </div>
+                </div>
+                <a href=""><button>View All</button></a>
+               </div>
+        </div>
     </section>
+    <footer>
+        <p>&#169; Intec <span></span></p>
+    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- <script src="./scripts/mainpage.js"></script> -->
     <script src="./scripts/app.js"></script>
+    <script>
+        document.querySelector("footer span").textContent= new Date().getFullYear();
+    </script>
     
 </body>
 </html>

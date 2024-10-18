@@ -54,7 +54,7 @@ gsap.to(videoInfo,{
     currentFrame:videoInfo.totalFrames,
     scrollTrigger:{
         trigger: video,
-        markers:true,
+        // markers:true,
         // pin:true,
         // pinSpacing:false,
         start: 'top 5%',
@@ -70,7 +70,7 @@ gsap.to(video2Info,{
     currentFrame:video2Info.totalFrames,
     scrollTrigger:{
         trigger: video2,
-        markers:true,
+        // markers:true,
         pin:true,
         // pinSpacing:false,
         start: 'top 5%',
@@ -121,7 +121,7 @@ const tl = gsap.timeline({
     scrollTrigger:{
         trigger:'#hero .content',
         start:'bottom 25%',
-        markers:true,
+        // markers:true,
         scrub:true,
         end:'bottom -20%',
         ease:'power1'
@@ -143,7 +143,7 @@ let tl2 = gsap.timeline({
     scrollTrigger:{
         trigger:'#second',
         start:'top 70%',
-        markers:true,
+        // markers:true,
         end:'center center',
         ease:'none',
         // scrub:true,
@@ -166,7 +166,7 @@ let tl3 = gsap.timeline({
         start:'top 70%',
         end: 'top 20%',
         scrub:true,
-        markers:true,
+        // markers:true,
         ease:'power1'
     }
 })

@@ -182,13 +182,13 @@ tl3.to('.inch',{
 tl3.from('#third .img-holder',{
     scale:0.4,
     rotateY:'45deg',
-})
+},'<')
 
 //fourth animations
 let tl4 = gsap.timeline({
     scrollTrigger:{
         trigger:'#fourth .holder',
-        start:'top 80%',
+        start:'20% 80%',
         end:'bottom 80%',
         scrub:true,
         markers:true,

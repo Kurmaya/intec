@@ -191,7 +191,7 @@ let tl4 = gsap.timeline({
         start:'20% 80%',
         end:'bottom 80%',
         scrub:true,
-        markers:true,
+        // markers:true,
     }
 })
 // tl4.to(".hyper",{

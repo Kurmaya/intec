@@ -27,7 +27,7 @@ nav{
     /* height:90px; */
     /* background:rgba(100,100,100,.8); */
     backdrop-filter: blur(10px);
-    background-color: rgba(200, 200, 200, 0.8); 
+    background-color: rgba(220, 220, 220, 0.5); 
     z-index: 5;
     position: fixed;
     top:0;
@@ -166,6 +166,7 @@ color:rgba(50,50,50,1);
     height:350px;
     margin: auto;
     gap:10px;
+    
 }
 .grid-item-image{
     width:80%;
@@ -214,6 +215,7 @@ color:rgba(50,50,50,1);
     background:rgba(100,100,100,.2);
     display:grid;
     place-items:center;
+    border-radius: 15px;
    }
    #third .desc-item h4,#fourth .desc-item h4{
     width:80%;
@@ -222,6 +224,7 @@ color:rgba(50,50,50,1);
    #third .desc img,#fourth .desc img{
     width:180px;
     height:120px;
+    object-fit: contain;
    }
   
    #third a,#fourth a{
@@ -247,4 +250,19 @@ footer{
     place-items:center;
     background:rgb(240 90 42) ;
     font-size: 1.2rem;
+}
+.hyper{
+    position: sticky;
+    width:50%;
+    color:black;
+    /* left:-100%; */
+    opacity: 0;
+    top:40%;
+    /* bottom:0; */
+}
+.inch{
+    font-size: 3rem!important;
+    position: absolute;
+    top:25%;
+    opacity: 0;
 }

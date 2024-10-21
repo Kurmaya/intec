@@ -175,11 +175,40 @@ tl2.from("#third h1",{
     
     
 })
+tl3.to('.inch',{
+    left:'15%',
+    opacity:1,
+},'+=0.5')
 tl3.from('#third .img-holder',{
     scale:0.4,
     rotateY:'45deg',
 })
 
+//fourth animations
+let tl4 = gsap.timeline({
+    scrollTrigger:{
+        trigger:'#fourth .holder',
+        start:'top 80%',
+        end:'bottom 80%',
+        scrub:true,
+        markers:true,
+    }
+})
+// tl4.to(".hyper",{
+    
+//     top:"40%",
+// })
+tl4.to(".hyper",{
+    opacity:1,
+    xPercent:-5,
+    zIndex:'10',
+})
+tl4.to('.hyper',{
+    xPercent:-100,
+})
+tl4.to(".hyper",{
+    opacity:0,
+})
 //navbar scale
 window.onscroll = function() {scrollFunction()};
 

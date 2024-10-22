@@ -14,7 +14,7 @@ video2.width=screen.width;
 
 const videoInfo = {
     totalFrames: 121,
-    totalTime: 5,
+    totalTime: 10,
     images:[],
     currentFrame: 0,
     currentImage : (index) =>
@@ -23,7 +23,7 @@ const videoInfo = {
 
 const video2Info = {
     totalFrames: 138,
-    totalTime: 5,
+    totalTime: 10,
     images:[],
     currentFrame: 0,
     currentImage : (index) =>
@@ -55,7 +55,8 @@ gsap.to(videoInfo,{
         // pinSpacing:false,
         start: 'top top',
         end:`bottom+=${(videoInfo.totalFrames*videoInfo.totalTime/5.9)}`,
-        scrub:true,    
+        scrub:2,    
+        ease:'none'
     },
     snap:'currentFrame',
     onUpdate: render,  
@@ -71,7 +72,8 @@ gsap.to(video2Info,{
         // pinSpacing:false,
         start: 'top 5%',
         end:`bottom+=${video2Info.totalFrames*video2Info.totalTime}`,
-        scrub:.2,    
+        scrub:1,   
+        ease:'none' 
     },
     snap:'currentFrame',
     onUpdate: render2,  
@@ -110,7 +112,25 @@ var centerShift_y = (video2.height - imageHeight2*ratio2)/2;
     );
     
 }
+//hero animation
+let herotl = gsap.timeline({
+    scrollTrigger:{
+        trigger:'#hero .holder',
+        start:'center 80%',
+        end:'bottom 100%',
+        // markers:true,
+        scrub:2,
 
+    }
+})
+herotl.from('.hero-text',{
+    opacity:0,
+    xPercent:-100,
+})
+herotl.to('.hero-text',{
+    opacity:0,
+    xPercent:-100,
+},'+=0.5')
 
 //content animations
 const tl = gsap.timeline({
@@ -124,6 +144,7 @@ const tl = gsap.timeline({
     }
 });
 
+
 tl.from(content[0],{
     opacity:0,
     xPercent:-20,
@@ -133,24 +154,24 @@ tl.from(content[1],{
     xPercent:-20,
 },'<')
 
-//second section animations
+//accessories section animations
 const gridCards = document.querySelectorAll(".grid-items");
 let tl2 = gsap.timeline({
     scrollTrigger:{
         trigger:'#second',
         start:'top 70%',
         // markers:true,
-        end:'center center',
+        // end:'center center',
         ease:'none',
         // scrub:true,
     }
 })
 tl2.from("#second h1",{
-    xPercent:-200,
+    xPercent:-300,
     opacity:0,
 })
 tl2.from(".grid-item",{
-    xPercent:-500,
+    xPercent:-1000,
     stagger:.1,
     
 })
@@ -194,7 +215,7 @@ let tl4 = gsap.timeline({
 // })
 tl4.to(".hyper",{
     opacity:1,
-    xPercent:-5,
+    xPercent:15,
     zIndex:'10',
 })
 tl4.to('.hyper',{

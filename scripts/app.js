@@ -43,11 +43,7 @@ for(let i=1;i<video2Info.totalFrames;i++){
     img.src=video2Info.currentImage(i);
     video2Info.images.push(img);
 }
-// console.log(videoInfo.currentImage(10));
 
-
-// console.log(videoInfo.images);
-// console.log(video2Info.images);
 
 //prefunction
 gsap.to(videoInfo,{
@@ -57,9 +53,9 @@ gsap.to(videoInfo,{
         // markers:true,
         // pin:true,
         // pinSpacing:false,
-        start: 'top 5%',
-        end:`bottom+=${(videoInfo.totalFrames*videoInfo.totalTime/5.5)}`,
-        scrub:.2,    
+        start: 'top top',
+        end:`bottom+=${(videoInfo.totalFrames*videoInfo.totalTime/5.9)}`,
+        scrub:true,    
     },
     snap:'currentFrame',
     onUpdate: render,  
@@ -120,22 +116,22 @@ var centerShift_y = (video2.height - imageHeight2*ratio2)/2;
 const tl = gsap.timeline({
     scrollTrigger:{
         trigger:'#hero .content',
-        start:'bottom 25%',
+        start:'top top',
         // markers:true,
         scrub:true,
-        end:'bottom -20%',
+        end:'bottom 50%',
         ease:'power1'
     }
 });
 
 tl.from(content[0],{
     opacity:0,
-    x:-20,
+    xPercent:-20,
 })
 tl.from(content[1],{
     opacity:0,
-    x:-20,
-})
+    xPercent:-20,
+},'<')
 
 //second section animations
 const gridCards = document.querySelectorAll(".grid-items");
@@ -170,11 +166,9 @@ let tl3 = gsap.timeline({
         ease:'power1'
     }
 })
-tl2.from("#third h1",{
-    xPercent:-200,
-    
-    
-})
+// tl2.from("#third h1",{
+//     xPercent:-200, 
+// })
 tl3.to('.inch',{
     left:'15%',
     opacity:1,

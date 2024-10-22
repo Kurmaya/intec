@@ -132,6 +132,9 @@ position: relative;
     cursor: pointer;
     transition: .3s ease;
 }
+#hero a {
+    margin: auto;
+}
 button:hover{
 background: rgba(150,150,150,.5);
 color:rgba(50,50,50,1);
@@ -183,9 +186,15 @@ color:rgba(50,50,50,1);
     width:100%;
     height:180vh;
 }
-#third h1,#second h1,#fourth h1{
+#third h1{
+    position: relative;
+    z-index: 10;
+    opacity: 1;
+}
+#second h1,#fourth h1{
     margin-left:10%;
 }
+
    #third .img-holder{
     width:100%;
     height:95vh;
@@ -203,21 +212,22 @@ color:rgba(50,50,50,1);
     text-align: center;
     top:50px;
    }
-   #third .desc,#fourth .desc{
+   #third .desc,#fourth .desc, #hero .desc{
     display: flex;
     width:100%;
     justify-content: space-between;
     padding:0 20px;
    }
-   #third .desc-item,#fourth .desc-item{
+   #third .desc-item,#fourth .desc-item,#hero .desc-item{
     width:225px;
     height:225px;
     background:rgba(100,100,100,.2);
     display:grid;
     place-items:center;
     border-radius: 15px;
+    text-align: center;
    }
-   #third .desc-item h4,#fourth .desc-item h4{
+   #third .desc-item h4,#fourth .desc-item h4,#hero .desc-item h4{
     width:80%;
     line-height: 1.5;
    }
